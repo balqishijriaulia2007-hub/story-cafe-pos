@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Story Café</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="emoji-logo">📖☕</div>
+      <h1>The Story Café</h1>
+      <p class="tagline">Every cup tells a story.</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Bagian Menu -->
+    <section class="menu">
+      <h2>Menu</h2>
+      <div id="menuList"></div>
+    </section>
+
+    <!-- Bagian Antrian -->
+    <section class="order">
+      <h2>Antrian Pelanggan</h2>
+      <input type="text" id="customerName" placeholder="Nama Pelanggan" />
+      <button onclick="addCustomer()">➕ Tambah Pelanggan</button>
+
+      <div id="queueDisplay"></div>
+
+      <!-- Bagian Pesan Menu -->
+      <div id="orderSection" style="display: none;">
+        <h3>Pesan Menu</h3>
+        <div id="cartItems"></div>
+        <p>Total: <span id="totalPrice">Rp0</span></p>
+
+        <h4>Metode Pembayaran</h4>
+        <select id="paymentMethod">
+          <option value="Cash">Cash</option>
+          <option value="E-Wallet">E-Wallet (GoPay, OVO, DANA)</option>
+          <option value="Mobile Banking">Mobile Banking / QRIS</option>
+        </select>
+
+        <button onclick="checkout()">🧾 Checkout</button>
+        <button onclick="resetOrder()">♻️ Reset</button>
+      </div>
+
+      <div id="receiptSection"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
